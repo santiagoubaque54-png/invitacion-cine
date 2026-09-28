@@ -1,0 +1,1359 @@
+/* ------------------------------
+   CONFIGURACIÓN GENERAL
+------------------------------ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #3b1d2a 0%,
+            #171016 35%,
+            #09090d 75%
+        );
+
+    color: #fff;
+
+    min-height: 100vh;
+}
+
+
+/* ------------------------------
+   CONTENEDOR PRINCIPAL
+------------------------------ */
+
+.contenedor {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+}
+
+
+/* ------------------------------
+   PANTALLA INICIAL
+------------------------------ */
+
+.inicio {
+    text-align: center;
+    max-width: 600px;
+
+    animation: aparecer 1.5s ease;
+}
+
+.icono {
+    font-size: 70px;
+    margin-bottom: 25px;
+
+    filter: drop-shadow(
+    0 0 15px rgba(255, 170, 190, 0.35)
+);
+
+    animation: flotar 3s ease-in-out infinite;
+}
+
+.inicio h1 {
+    font-size: 42px;
+
+    margin-bottom: 20px;
+
+    background: linear-gradient(
+        90deg,
+        #fff,
+        #f3b6c7,
+        #e8c28f
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.inicio p {
+    color: #e3d6da;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    margin-bottom: 35px;
+}
+
+
+/* ------------------------------
+   BOTONES
+------------------------------ */
+
+button {
+    border: none;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    padding: 14px 25px;
+
+    border-radius: 30px;
+
+    transition: 0.3s ease;
+}
+
+
+/* Botón principal */
+
+#abrirBtn {
+
+    background: linear-gradient(
+        135deg,
+        #f4b6c7,
+        #d98da5
+    );
+
+    color: #24151b;
+
+    box-shadow:
+        0 8px 25px rgba(217, 141, 165, 0.25);
+}
+
+#abrirBtn:hover {
+
+    transform: scale(1.05);
+
+    box-shadow:
+        0 10px 30px rgba(217, 141, 165, 0.4);
+}
+
+
+/* ------------------------------
+   INVITACIÓN
+------------------------------ */
+
+.invitacion {
+
+    display: none;
+
+    width: 100%;
+
+    max-width: 650px;
+}
+
+/* --------------------------------
+   BOLETO DE CINE
+-------------------------------- */
+
+.boleto {
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(58, 29, 43, 0.97),
+            rgba(20, 14, 20, 0.99)
+        );
+
+    border: 1px solid rgba(232, 178, 194, 0.28);
+
+    border-radius: 22px;
+
+    padding: 45px;
+
+    text-align: center;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.7),
+        0 0 40px rgba(132, 52, 78, 0.18);
+
+    overflow: hidden;
+
+    animation: aparecer 1s ease;
+}
+
+/* --------------------------------
+   ENCABEZADO DEL BOLETO
+-------------------------------- */
+
+.pequeno {
+
+    display: block;
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    color: #dba8b7;
+
+    margin-bottom: 15px;
+}
+
+
+.boleto h2 {
+
+    font-size: 36px;
+
+    margin: 15px 0 20px;
+
+    color: #f7dce4;
+
+    text-shadow:
+        0 0 20px rgba(244, 182, 199, 0.12);
+}
+
+
+.boleto p {
+
+    color: #dfd0d5;
+
+    line-height: 1.7;
+
+    margin: 15px 0;
+}
+
+
+.boleto h3 {
+
+    margin: 30px 0;
+
+    font-size: 24px;
+
+    color: #e8c28f;
+
+    letter-spacing: 1px;
+}
+
+
+/* --------------------------------
+   BOTONES
+-------------------------------- */
+
+.botones {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-top: 45px;
+
+    flex-wrap: wrap;
+};
+
+
+
+#aceptarBtn {
+
+    background:
+        linear-gradient(
+            135deg,
+            #e7a8ba,
+            #c97994
+        );
+
+    color: #24151b;
+
+    border:
+        1px solid
+        rgba(244, 182, 199, 0.25);
+
+    box-shadow:
+        0 8px 20px
+        rgba(217, 141, 165, 0.18);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        filter 0.3s ease;
+
+}
+
+#aceptarBtn:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(217, 141, 165, 0.32);
+
+    filter: brightness(1.08);
+
+}
+
+
+#pensarBtn {
+
+    background: rgba(255, 255, 255, 0.06);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    color: #eee;
+}
+
+#pensarBtn:hover {
+
+    background: rgba(255, 255, 255, 0.1);
+}
+
+
+/* ------------------------------
+   CONFIRMACIÓN
+------------------------------ */
+
+.confirmacion {
+
+    display: none;
+
+    text-align: center;
+
+    animation: aparecer 1s ease;
+}
+
+.confirmacion h2 {
+
+    font-size: 40px;
+
+    margin: 20px 0;
+
+    color: #f5d5df;
+}
+
+.confirmacion p {
+
+    color: #d8cbd0;
+
+    margin: 10px;
+
+    font-size: 18px;
+}
+
+.palomitas {
+
+    font-size: 80px;
+
+    filter: drop-shadow(
+        0 0 20px rgba(232, 194, 143, 0.25)
+    );
+
+    animation: flotar 2s ease-in-out infinite;
+}
+
+
+/* ------------------------------
+   ANIMACIONES
+------------------------------ */
+
+@keyframes aparecer {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+@keyframes flotar {
+
+    0% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-10px);
+
+    }
+
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* ------------------------------
+   CELULARES
+------------------------------ */
+
+@media (max-width: 600px) {
+
+    .contenedor {
+
+        padding: 20px;
+
+    }
+
+    .inicio h1 {
+
+        font-size: 32px;
+
+    }
+
+    .boleto {
+
+        padding: 35px 20px;
+
+    }
+
+    .boleto h2 {
+
+        font-size: 28px;
+
+    }
+
+    .boleto h3 {
+
+        font-size: 20px;
+
+    }
+        .botones {
+        flex-wrap: wrap;
+    }
+
+}
+/* --------------------------------
+   ANIMACIONES DE LOS BOTONES
+-------------------------------- */
+
+.desaparecer {
+
+    animation: desaparecer 0.7s ease forwards;
+
+}
+
+
+@keyframes desaparecer {
+
+    from {
+
+        opacity: 1;
+        transform: scale(1);
+
+    }
+
+    to {
+
+        opacity: 0;
+        transform: scale(0.95);
+
+    }
+
+}
+
+
+.entrada-boleto {
+
+    animation:
+        boletoEntrada 1s ease;
+
+}
+
+
+@keyframes boletoEntrada {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(40px)
+            scale(0.92);
+
+        filter:
+            blur(8px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+        filter:
+            blur(0);
+
+    }
+
+}
+
+
+.boton-presionado {
+
+    animation:
+        botonPresionado 0.4s ease;
+
+}
+
+
+@keyframes botonPresionado {
+
+    50% {
+
+        transform: scale(0.92);
+
+    }
+
+}
+
+
+/* --------------------------------
+   PALOMITAS
+-------------------------------- */
+
+.palomita-flotante {
+
+    position: fixed;
+
+    bottom: -50px;
+
+    font-size: 25px;
+
+    pointer-events: none;
+
+    z-index: 9999;
+
+    animation:
+        palomitaSubir 3s ease forwards;
+
+}
+
+
+@keyframes palomitaSubir {
+
+    0% {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 0;
+
+    }
+
+    15% {
+
+        opacity: 1;
+
+    }
+
+    100% {
+
+        transform:
+            translateY(-110vh)
+            rotate(360deg);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+/* --------------------------------
+   CONFIRMACIÓN
+-------------------------------- */
+
+.entrada-confirmacion {
+    animation: confirmacionEntrada 1.4s ease forwards;
+}
+
+
+@keyframes confirmacionEntrada {
+
+    0% {
+        opacity: 0;
+        transform: scale(.85) translateY(35px);
+        filter: blur(8px);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.02) translateY(0);
+        filter: blur(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+        filter: blur(0);
+    }
+
+}
+
+/* --------------------------------
+   MENSAJE "PENSARLO"
+-------------------------------- */
+
+.mensaje-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 25px;
+
+    background:
+        rgba(5, 5, 8, 0.88);
+
+    backdrop-filter:
+        blur(8px);
+
+    z-index: 10000;
+
+    animation:
+        aparecerOverlay 0.5s ease;
+
+}
+
+
+.mensaje-card {
+
+    width: 100%;
+
+    max-width: 430px;
+
+    text-align: center;
+
+    padding: 40px 30px;
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #351d29,
+            #171017
+        );
+
+    border:
+        1px solid
+        rgba(244, 182, 199, 0.25);
+
+    box-shadow:
+        0 25px 80px
+        rgba(0, 0, 0, 0.7);
+
+    animation:
+        tarjetaEntrada 0.7s ease;
+
+}
+
+
+.mensaje-icono {
+    font-size: 55px;
+    margin-bottom: 15px;
+
+    animation: brilloCine 2.5s ease-in-out infinite;
+}
+@keyframes brilloCine {
+
+    0%,
+    100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 0 rgba(244, 182, 199, 0));
+    }
+
+    50% {
+        transform: scale(1.08);
+        filter: drop-shadow(0 0 14px rgba(244, 182, 199, 0.55));
+    }
+
+}
+
+
+.mensaje-card h2 {
+    font-size: 30px;
+    color: #f7dce4;
+    margin-bottom: 15px;
+
+    animation: tituloCine 1.2s ease forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
+}
+@keyframes tituloCine {
+
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+.mensaje-card p {
+    color: #dfd0d5;
+    line-height: 1.7;
+    margin-bottom: 25px;
+
+    opacity: 0;
+    animation: textoFinalCine 1s ease forwards;
+    animation-delay: 0.9s;
+}
+@keyframes textoFinalCine {
+
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+#volverBtn {
+
+    background:
+        linear-gradient(
+            135deg,
+            #f4b6c7,
+            #d98da5
+        );
+
+    color: #24151b;
+
+}
+
+
+/* --------------------------------
+   ANIMACIONES DEL MENSAJE
+-------------------------------- */
+
+@keyframes aparecerOverlay {
+
+    from {
+
+        opacity: 0;
+
+    }
+
+    to {
+
+        opacity: 1;
+
+    }
+
+}
+
+
+@keyframes tarjetaEntrada {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(30px)
+            scale(0.9);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+.cerrar-mensaje {
+
+    animation:
+        cerrarMensaje 0.5s ease forwards;
+
+}
+
+
+@keyframes cerrarMensaje {
+
+    to {
+
+        opacity: 0;
+
+    }
+
+}
+/* --------------------------------
+   FONDO CINEMATOGRÁFICO
+-------------------------------- */
+
+body::before {
+    content: "";
+
+    position: fixed;
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(244, 182, 199, 0.12),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 80% 30%,
+            rgba(232, 194, 143, 0.10),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(132, 52, 78, 0.18),
+            transparent 40%
+        );
+
+    z-index: -1;
+
+    animation: lucesCine 10s ease-in-out infinite alternate;
+}
+
+
+/* --------------------------------
+   LUCES DEL FONDO
+-------------------------------- */
+
+body::after {
+    content: "";
+
+    position: fixed;
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            circle at 15% 70%,
+            rgba(255, 190, 210, 0.08) 0,
+            transparent 8%
+        ),
+        radial-gradient(
+            circle at 85% 65%,
+            rgba(255, 220, 170, 0.08) 0,
+            transparent 9%
+        ),
+        radial-gradient(
+            circle at 50% 15%,
+            rgba(255, 255, 255, 0.05) 0,
+            transparent 7%
+        );
+
+    filter: blur(12px);
+
+    z-index: -1;
+
+    animation: lucesFlotantes 14s ease-in-out infinite alternate;
+}
+
+
+/* --------------------------------
+   ANIMACIÓN DE LAS LUCES
+-------------------------------- */
+
+@keyframes lucesCine {
+
+    0% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+
+    50% {
+        transform: scale(1.08);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+}
+
+
+@keyframes lucesFlotantes {
+
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(15px, -10px);
+    }
+
+    100% {
+        transform: translate(-10px, 15px);
+    }
+
+}
+/* --------------------------------
+   DETALLES DEL BOLETO
+-------------------------------- */
+
+/* --------------------------------
+   DETALLES DEL BOLETO
+-------------------------------- */
+
+.detalles-boleto {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+
+    margin-top: 70px;
+
+    padding: 10px 5px;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+/* --------------------------------
+   BURBUJAS DE INFORMACIÓN
+-------------------------------- */
+
+.detalle {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+
+    text-align: left;
+
+    padding: 15px 17px;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.07),
+            rgba(255, 255, 255, 0.025)
+        );
+
+    border:
+        1px solid
+        rgba(244, 182, 199, 0.14);
+
+    box-shadow:
+        inset 0 1px 0
+        rgba(255, 255, 255, 0.04),
+        0 8px 20px
+        rgba(0, 0, 0, 0.12);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease;
+
+}
+
+
+/* Efecto al pasar el mouse */
+
+.detalle:hover {
+
+    transform: translateY(-3px);
+
+    border-color:
+        rgba(244, 182, 199, 0.28);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.09),
+            rgba(255, 255, 255, 0.035)
+        );
+
+}
+
+
+/* --------------------------------
+   NOMBRE DEL DATO
+-------------------------------- */
+
+.etiqueta {
+
+    font-size: 9px;
+
+    letter-spacing: 2.5px;
+
+    color: #c994a5;
+
+    font-weight: bold;
+
+}
+
+
+/* --------------------------------
+   VALOR
+-------------------------------- */
+
+.valor {
+
+    font-size: 14px;
+
+    color: #f1dce2;
+
+}
+
+
+/* --------------------------------
+   BOTONES
+-------------------------------- */
+
+.botones {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 35px;
+
+    flex-wrap: nowrap;
+
+}
+
+/* --------------------------------
+   ICONOS DE LOS DETALLES
+-------------------------------- */
+
+.icono-detalle {
+
+    display: block;
+
+    font-size: 22px;
+
+    margin-bottom: 4px;
+
+    filter:
+        drop-shadow(
+            0 0 8px
+            rgba(244, 182, 199, 0.15)
+        );
+
+}
+/* --------------------------------
+   AJUSTE FINAL DE BOTONES
+-------------------------------- */
+
+.botones {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 15px !important;
+    margin-top: 35px !important;
+    flex-wrap: nowrap !important;
+}
+
+#aceptarBtn,
+#pensarBtn {
+    width: auto !important;
+    min-width: 150px !important;
+    height: 52px !important;
+
+    padding: 14px 5px !important;
+
+    white-space: nowrap !important;
+
+    border-radius: 30px !important;
+
+    font-size: 15px !important;
+
+    cursor: pointer;
+}
+
+
+/* BOTÓN ACEPTAR */
+
+#aceptarBtn {
+
+    background:
+        linear-gradient(
+            135deg,
+            #e7a8ba,
+            #c97994
+        ) !important;
+
+    color: #24151b !important;
+
+    border:
+        1px solid
+        rgba(244, 182, 199, 0.25) !important;
+
+    box-shadow:
+        0 8px 20px
+        rgba(217, 141, 165, 0.22) !important;
+}
+
+
+/* BOTÓN PENSAR */
+
+#pensarBtn {
+
+    background:
+        rgba(257, 257, 257, 0.06) !important;
+
+    color: #fff9f9 !important;
+
+    border:
+        2px solid
+        rgb(214, 110, 141) !important;
+
+    box-shadow: none !important;
+}
+
+
+/* EFECTOS */
+
+#aceptarBtn:hover {
+
+    transform: translateY(-3px);
+
+    filter: brightness(1.08);
+
+}
+
+
+#pensarBtn:hover {
+
+    transform: translateY(-3px);
+
+    background:
+        rgba(255, 255, 255, 0.10) !important;
+
+}
+
+
+/* --------------------------------
+   CELULARES
+-------------------------------- */
+
+@media (max-width: 600px) {
+
+    .botones {
+        flex-wrap: wrap !important;
+    }
+
+    #aceptarBtn,
+    #pensarBtn {
+        min-width: 180px !important;
+    }
+
+}
+/* --------------------------------
+   AJUSTE FINAL DE LAS BURBUJAS
+-------------------------------- */
+
+.detalles-boleto {
+
+    display: grid !important;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr)) !important;
+
+    width: 100% !important;
+
+    gap: 15px !important;
+
+    margin-top: 70px !important;
+
+    padding: 10px 0 !important;
+
+    box-sizing: border-box !important;
+
+}
+
+
+.detalle {
+
+    width: 100% !important;
+
+    min-width: 0 !important;
+
+    box-sizing: border-box !important;
+
+    padding: 15px 17px !important;
+
+    border-radius: 14px;
+
+}
+
+
+/* --------------------------------
+   CELULAR
+-------------------------------- */
+
+@media (max-width: 600px) {
+
+    .detalles-boleto {
+
+        grid-template-columns:
+            1fr !important;
+
+    }
+
+}
+/* --------------------------------
+   TRANSICIÓN DE CONFIRMACIÓN
+-------------------------------- */
+
+.mensaje-decision {
+
+    opacity: 0;
+
+    transform: scale(0.9);
+
+    animation: decisionCine 1.4s ease forwards;
+}
+
+
+@keyframes decisionCine {
+
+    0% {
+
+        opacity: 0;
+
+        transform: scale(0.9);
+
+    }
+
+    40% {
+
+        opacity: 1;
+
+        transform: scale(1);
+
+    }
+
+    75% {
+
+        opacity: 1;
+
+        transform: scale(1);
+
+    }
+
+    100% {
+
+        opacity: 0;
+
+        transform: scale(1.05);
+
+    }
+
+}
+/* --------------------------------
+   TRANSICIÓN CINEMATOGRÁFICA
+-------------------------------- */
+
+.transicion-cine::before {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(5, 3, 7, 0.75);
+
+    z-index: 9998;
+
+    pointer-events: none;
+
+    animation: oscurecerCine 1.3s ease forwards;
+
+}
+
+
+@keyframes oscurecerCine {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+/* --------------------------------
+   TEXTO FINAL
+-------------------------------- */
+
+.texto-final {
+    opacity: 0;
+    transform: translateY(12px);
+    animation: textoFinalCine 1s ease forwards;
+    animation-delay: 1s;
+}
+
+@keyframes textoFinalCine {
+
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
